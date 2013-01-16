@@ -1,12 +1,5 @@
-# Compiled Object files
-*.slo
-*.lo
-*.o
-
-# Compiled Dynamic libraries
-*.so
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
+# Git Ignore file for first robot projects
+*.o     # ignore the build files.
+*.d
+*~
+PPC603gnu/*
