@@ -35,14 +35,12 @@ void Drivetrain::InitDefaultCommand()
 void Drivetrain::HolonomicDrive(Joystick *joystick) 
 {
 	// Simply passes Joystick *joystick to the drivetrain to control the robot.
-	holonomic->HolonomicDrive(joystick->GetMagnitude(), joystick->GetDirectionDegrees(), joystick->GetTwist());
+	holonomic->HolonomicDrive(joystick->GetMagnitude(), joystick->GetDirectionDegrees(), joystick->GetThrottle());
 }
-
 void Drivetrain::HolonomicDrive(float magnitude, float direction, float rotation)
 {
 	holonomic->HolonomicDrive(magnitude, direction, rotation);
 }
-
 float Drivetrain::GetDistance()
 {
 	return ultrasonicSensor->GetValue() * UNITS_TO_INCHES;

@@ -1,7 +1,7 @@
 Version 0.0.2
 
 ---
-Name: Holonomic Drive
+Name: Robot_1
 Base: Robot
 Children:
 - Name: Subsystems
@@ -34,7 +34,7 @@ Children:
             default: '1'
             name: Output Channel (PWM)
             validators: &id005 [PWMOutput]
-            value: '2'
+            value: '3'
       - Name: Front Left
         Base: Speed Controller
         Children: []
@@ -78,7 +78,7 @@ Children:
             default: '1'
             name: Output Channel (PWM)
             validators: *id005
-            value: '3'
+            value: '4'
       - Name: Back Left
         Base: Speed Controller
         Children: []
@@ -100,7 +100,7 @@ Children:
             default: '1'
             name: Output Channel (PWM)
             validators: *id005
-            value: '4'
+            value: '2'
       Properties:
         Sensitivity: !!robotbuilder.data.properties.DoubleProperty {default: 0.5,
           name: Sensitivity, validators: null, value: 0.5}
