@@ -37,7 +37,6 @@ void Shooter::SetWheelSpeed(float speed)
 		speed = 1.0f;
 		printf("******	Keep speed input between 0.0 and 1.0.\n");
 	}
-
 	shooterVictor->Set(speed);
 	
 }
