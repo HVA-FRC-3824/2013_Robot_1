@@ -18,10 +18,11 @@ DrivetoWall::DrivetoWall() {
 // Called just before this Command runs the first time
 void DrivetoWall::Initialize() {
 	
-	Robot::drivetrain->HolonomicDrive(DRIVING_POWER, DRIVING_DIRECTION, DRIVING_ROTATION);
 }
 // Called repeatedly when this Command is scheduled to run
 void DrivetoWall::Execute() {
+	
+	Robot::drivetrain->HolonomicDrive(DRIVING_POWER, DRIVING_DIRECTION, DRIVING_ROTATION);
 	
 	
 }
@@ -29,9 +30,9 @@ void DrivetoWall::Execute() {
 bool DrivetoWall::IsFinished() 
 {
 	// Gets the distance to the wall in inches.
-	double range = Robot::drivetrain->ultrasonicSensor->GetValue();
+	range = Robot::drivetrain->GetDistance();
 	
-	if(range < STOPPING_DISTANCE) // STOPPING_DISTANCE = 0.5
+	if(range < STOPPING_DISTANCE) // STOPPING_DISTANCE = 10.0 inches
 	{
 		// if the distance to the wall is less than the distance set in header file,
 		// isFinished() will return true and go to End() method.

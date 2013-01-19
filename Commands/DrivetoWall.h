@@ -11,10 +11,6 @@
 
 #ifndef DRIVE_TO_WALL_H
 #define DRIVE_TO_WALL_H
-#define STOPPING_DISTANCE		10.0
-#define DRIVING_POWER			1.0
-#define DRIVING_DIRECTION		0.0
-#define DRIVING_ROTATION		0.0
 
 
 
@@ -34,6 +30,7 @@ public:
 	virtual bool IsFinished();
 	virtual void End();
 	virtual void Interrupted();
+	float range;
 };
 
 #endif
