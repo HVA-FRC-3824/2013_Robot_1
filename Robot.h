@@ -24,6 +24,7 @@
 #define DRIVING_POWER				1.0
 #define DRIVING_DIRECTION			0.0
 #define DRIVING_ROTATION			0.0
+
 class Robot : public IterativeRobot {
 public:
 	Command *autonomousCommand;
