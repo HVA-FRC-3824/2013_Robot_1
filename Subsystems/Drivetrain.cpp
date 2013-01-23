@@ -39,7 +39,7 @@ void Drivetrain::HolonomicDrive(Joystick *joystick)
 }
 void Drivetrain::HolonomicDrive(float magnitude, float direction, float rotation)
 {
-	holonomic->HolonomicDrive(magnitude, direction, rotation);
+	holonomic->HolonomicDrive(magnitude, 360 - direction, rotation);
 }
 float Drivetrain::GetDistance()
 {

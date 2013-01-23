@@ -9,8 +9,8 @@
 // it from being updated in th future.
 
 
-#ifndef SHOOTER_ADJUST_VERTICAL_ANGLE_H
-#define SHOOTER_ADJUST_VERTICAL_ANGLE_H
+#ifndef SHOOTER_ADJUST_ANGLE_DOWN_H
+#define SHOOTER_ADJUST_ANGLE_DOWN_H
 
 
 #include "Commands/Subsystem.h"
@@ -21,9 +21,9 @@
  *
  * @author ExampleAuthor
  */
-class ShooterAdjustVerticalAngle: public Command {
+class ShooterAdjustAngleDown: public Command {
 public:
-	ShooterAdjustVerticalAngle();
+	ShooterAdjustAngleDown();
 	virtual void Initialize();
 	virtual void Execute();
 	virtual bool IsFinished();
