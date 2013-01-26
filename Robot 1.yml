@@ -283,7 +283,7 @@ Children:
           default: '1'
           name: Output Channel (Relay)
           validators: [RelayOutput]
-          value: '1'
+          value: '2'
     - Name: Feeder Switch
       Base: Digital Input
       Children: []

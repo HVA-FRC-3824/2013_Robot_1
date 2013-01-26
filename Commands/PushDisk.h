@@ -12,7 +12,7 @@
 #ifndef PUSH_DISK_H
 #define PUSH_DISK_H
 
-
+#include "Timer.h"
 #include "Commands/Subsystem.h"
 #include "../Robot.h"
 
@@ -22,6 +22,10 @@
  * @author ExampleAuthor
  */
 class PushDisk: public Command {
+private:
+	
+	Timer *pusherTimer;
+	
 public:
 	
 	PushDisk();

@@ -67,7 +67,7 @@ void RobotMap::init() {
 	shooterShooterFinger = new Victor(1, 8);
 	lw->AddActuator("Shooter", "Shooter Finger", (Victor*) shooterShooterFinger);
 	
-	shooterFeederSpike = new Relay(1, 1);
+	shooterFeederSpike = new Relay(1, 2);
 	lw->AddActuator("Shooter", "Feeder Spike", shooterFeederSpike);
 	
 	shooterFeederSwitch = new DigitalInput(1, 1);

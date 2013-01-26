@@ -52,6 +52,8 @@ void Robot::TeleopInit() {
 void Robot::TeleopPeriodic() {
 	if (autonomousCommand != NULL)
 		Scheduler::GetInstance()->Run();
+	
+	SmartDashboard::PutBoolean("Switch Value", Robot::shooter->feederSwitch->Get());
 }
 void Robot::TestPeriodic() {
 	lw->Run();
