@@ -50,5 +50,5 @@ void ShooterShoot::End()
 // subsystems is scheduled to run
 void ShooterShoot::Interrupted() 
 {
-	End();
+	
 }

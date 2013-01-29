@@ -283,7 +283,7 @@ Children:
           default: '1'
           name: Output Channel (Relay)
           validators: [RelayOutput]
-          value: '2'
+          value: '1'
     - Name: Feeder Switch
       Base: Digital Input
       Children: []
@@ -322,7 +322,7 @@ Children:
           value: '1'
     Properties:
       Default Command: !!robotbuilder.data.properties.TypeSelectionProperty {default: None,
-        name: Default Command, type: Command, validators: null, value: None}
+        name: Default Command, type: Command, validators: null, value: Shooter Shoot}
   Properties: {}
 - Name: Operator Interface
   Base: OI

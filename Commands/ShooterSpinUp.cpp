@@ -28,7 +28,9 @@ void ShooterSpinUp::Initialize()
 // Called repeatedly when this Command is scheduled to run
 void ShooterSpinUp::Execute() 
 {
+	Robot::shooter->SetWheelSpeed(((Robot::oi->getDriveJoystick()->GetTwist() + 1.0f) / 2.0f)); 
 	
+	SmartDashboard::PutNumber("Shooter Value", ((Robot::oi->getDriveJoystick()->GetTwist() + 1.0f) / 2.0f)); 
 }
 // Make this return true when this Command no longer needs to run execute()
 bool ShooterSpinUp::IsFinished() 
@@ -51,5 +53,5 @@ void ShooterSpinUp::End()
 // subsystems is scheduled to run
 void ShooterSpinUp::Interrupted() 
 {
-	End();
+	
 }
