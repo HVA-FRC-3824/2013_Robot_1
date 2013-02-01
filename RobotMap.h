@@ -25,6 +25,7 @@ public:
 	static SpeedController* drivetrainBackLeft;
 	static RobotDrive* drivetrainHolonomic;
 	static AnalogChannel* drivetrainUltrasonicSensor;
+	static Accelerometer* drivetrainAccelerometer;
 	static SpeedController* shooterShooterTalon2;
 	static SpeedController* shooterShooterTalon1;
 	static SpeedController* shooterAngleVictor;

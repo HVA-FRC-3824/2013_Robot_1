@@ -16,6 +16,7 @@ SpeedController* RobotMap::drivetrainBackRight = NULL;
 SpeedController* RobotMap::drivetrainBackLeft = NULL;
 RobotDrive* RobotMap::drivetrainHolonomic = NULL;
 AnalogChannel* RobotMap::drivetrainUltrasonicSensor = NULL;
+Accelerometer* RobotMap::drivetrainAccelerometer = NULL;
 SpeedController* RobotMap::shooterShooterTalon2 = NULL;
 SpeedController* RobotMap::shooterShooterTalon1 = NULL;
 SpeedController* RobotMap::shooterAngleVictor = NULL;
@@ -52,6 +53,10 @@ void RobotMap::init() {
 	drivetrainUltrasonicSensor = new AnalogChannel(1, 2);
 	lw->AddSensor("Drivetrain", "Ultrasonic Sensor", drivetrainUltrasonicSensor);
 	
+	drivetrainAccelerometer = new Accelerometer(1, 3);
+	lw->AddSensor("Drivetrain", "Accelerometer", drivetrainAccelerometer);
+	drivetrainAccelerometer->SetSensitivity(1.0);
+        drivetrainAccelerometer->SetZero(2.5);
 	shooterShooterTalon2 = new Talon(1, 6);
 	lw->AddActuator("Shooter", "Shooter Talon 2", (Talon*) shooterShooterTalon2);
 	
